@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,24 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    if( auth()->guest() ) {
-        // dd( 'home');
-        return view('guest.home');
-    } else {
-        if( ! auth()->user()->enabled ) {
-            // dd('wait');
-            return view('user.wait');
-        } else {
-            // dd('dashboard');
-            return view('user.dashboard');
-        }
-    }
-})->name('home');
+// Common routes
+Route::get('/', [ PagesController::class, 'index'] )->name('home');
 
-Route::get('/contacto', function() {
-    return view('guest.contacto');
-})->name('contacto');
+// Guest routes
+Route::get('/contacto', [ PagesController::class, 'contacto' ])->name('contacto');
 
 Route::middleware([
     'auth:sanctum',
