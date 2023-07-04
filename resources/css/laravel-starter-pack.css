@@ -1,3 +1,4 @@
+
 .form-control {
     @apply border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm;
 }
@@ -22,13 +23,13 @@
 
 @layer base {
     h1 {
-      @apply text-3xl;
+      @apply text-3xl mb-3;
     }
     h2 {
-      @apply text-2xl;
+      @apply text-2xl mb-2;
     }
     h3 {
-        @apply text-xl;
+        @apply text-xl mb-1;
     }
     table {
         @apply w-full border-collapse bg-white text-left text-sm text-gray-500 table-auto relative overflow-x-auto rounded-lg border border-gray-200 shadow-md m-1;
