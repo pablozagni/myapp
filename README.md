@@ -20,14 +20,13 @@ There are GUESTs views:
 You can Register and Log in.
 
 ![Login](https://github.com/pablozagni/myapp/blob/master/resources/assets/markdown/img/img1.png?raw=true)
-<img src="/assets/markdown/img/img1.png" alt="Login" />
 
 Register with your email and you'll get a validation email.
 Once loged in, user has a Dashboard, with responsive options menu.
 
-<img src="/assets/markdown/img/img2.png" alt="Main menu" />
+![Main menu](https://github.com/pablozagni/myapp/blob/master/resources/assets/markdown/img/img2.png?raw=true)
 
-<img src="/assets/markdown/img/img6.png" alt="Responsive  menu" />
+![Responsive menu](https://github.com/pablozagni/myapp/blob/master/resources/assets/markdown/img/img6.png?raw=true)
 
 ##  CSS & Layouts
 
@@ -51,6 +50,6 @@ As Users & Admins can edit Clients, the views for each one are stored in
 
 You can choose to build a ClientRequest for validation, and a "fill" statement. I prefer large but clear code.
 
-<img src="/assets/markdown/img/img3.png" alt="Main menu" />
-<img src="/assets/markdown/img/img4.png" alt="Main menu" />
-<img src="/assets/markdown/img/img5.png" alt="Main menu" />
+![](https://github.com/pablozagni/myapp/blob/master/resources/assets/markdown/img/img3.png?raw=true)
+![](https://github.com/pablozagni/myapp/blob/master/resources/assets/markdown/img/img4.png?raw=true)
+![](https://github.com/pablozagni/myapp/blob/master/resources/assets/markdown/img/img5.png?raw=true)
