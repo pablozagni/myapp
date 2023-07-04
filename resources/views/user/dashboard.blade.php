@@ -1,5 +1,5 @@
 <x-user-layout>
     <x-container>
-        <h1>Panel de control</h1>
+        <h1>{{ __('Dashboard') }}</h1>
     </x-container>
 </x-user-layout>    

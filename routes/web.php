@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,14 +19,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [ PagesController::class, 'index'] )->name('home');
 
 // Guest routes
-Route::get('/contacto', [ PagesController::class, 'contacto' ])->name('contacto');
+Route::get('/contact', [ PagesController::class, 'contact' ])->name('contact');
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])->group(function () {
+    Route::get('/dashboard', [ PagesController::class, 'dashboard'] )->name('dashboard');
+    
+    // Clients
+    Route::resource('clients', ClientController::class )->names('clients');
 });

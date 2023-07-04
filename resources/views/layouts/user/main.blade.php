@@ -2,12 +2,15 @@
     <x-slot name="navbar">
         @include('user.navbar')
     </x-slot>
-    <div class="py-4 grid grid-cols-5">
+
+    {{-- https://tailwindcomponents.com/component/responsive-sidebar-with-dropdown --}}
+
+    <!-- component -->
+    <div class="md:flex flex-col md:flex-row md:min-h-screen w-full">
         @include('user.sidebar')
-        <div class="col-span-4">
-            <div class="text-gray-600 mx-2">
-                {{ $slot }}
-            </div>
+
+        <div class="items-start w-full">
+            {{ $slot }}
         </div>
     </div>
 </x-main-layout>

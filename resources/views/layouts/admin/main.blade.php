@@ -1,6 +1,6 @@
 <x-main-layout>
     <x-slot name="navbar">
-        @include('user.navbar')
+        @include('admin.navbar')
     </x-slot>
     <div class="py-4 grid grid-cols-5">
         @include('admin.sidebar')

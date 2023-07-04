@@ -1,5 +1,5 @@
 <x-guest-layout>
     <x-container>
-        <h1>Mensaje de Bienvenida</h1>
+        <h1>{{ __('Welcome') }}</h1>
     </x-container>
 </x-guest-layout>
