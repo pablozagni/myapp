@@ -19,7 +19,7 @@ There are GUESTs views:
  
 You can Register and Log in.
 
-
+![alt text](https://github.com/pablozagni/myapp/blob/master/assets/markdown/img/img1.png?raw=true)
 <img src="/assets/markdown/img/img1.png" alt="Login" />
 
 Register with your email and you'll get a validation email.
