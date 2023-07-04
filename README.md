@@ -3,13 +3,13 @@ This is a basic Laravel App using Laravel 10, Jetstream, Livewire, laravelcollec
 It has a lot of componets, designed for a rapid development start.
 
 ##  Usage
-
+```
  - clone repo
  - create .env file from .env.example
  - php artisan key:generate
  - php artisan migrate:fresh
  - serve and register
-
+```
 
 ##  The APP
 
@@ -18,6 +18,7 @@ There are GUESTs views:
  - Contact us
  
 You can Register and Log in.
+
 
 <img src="/assets/markdown/img/img1.png" alt="Login" />
 
