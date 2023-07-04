@@ -1,5 +1,6 @@
 #  About MyApp
 This is a basic Laravel App using Laravel 10, Jetstream, Livewire, laravelcollective/html, Bite and Tailwind CSS.
+This APP uses pablozagni/laravel-starter-pack, a package intended to concentrate all blade components and re use them in any new application.
 It has a lot of componets, designed for a rapid development start.
 
 ##  Usage
