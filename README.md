@@ -5,10 +5,15 @@ It has a lot of componets, designed for a rapid development start.
 The idea is to build a complete and usefull suite of components.
 
 With
+
 ![Form code](https://github.com/pablozagni/myapp/blob/master/resources/assets/markdown/img/img8.png?raw=true)
+
 You get
+
 ![Form](https://github.com/pablozagni/myapp/blob/master/resources/assets/markdown/img/img7.png?raw=true)
+
 And responsive
+
 ![Form responsive](https://github.com/pablozagni/myapp/blob/master/resources/assets/markdown/img/img9.png?raw=true)
 
 ##  Usage
