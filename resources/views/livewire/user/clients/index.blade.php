@@ -10,7 +10,9 @@
                 <thead>
                     <tr>
                         <th>{{ __('Name') }}</th>
-                        <th>{{ __('Email') }}</th>
+                        <th>{{ __('Email') }}</th>                        
+                        <th>{{ __('Country') }}</th>
+                        <th>{{ __('Countries') }}</th>
                         <th class="text-right">{{ __('Actions') }}</th>
                     </tr>
                 </thead>
@@ -19,6 +21,12 @@
                         <tr>   
                             <td>{{ $client->name }}</td>
                             <td>{{ $client->email }}</td>
+                            <td>{{ $client->country->name }}</td>
+                            <td>
+                                @foreach ($client->countries as $country)
+                                    <span class="badge badge-primary">{{ $country->name }}</span>
+                                @endforeach
+                            </td>
                             <td>
                                 <div class="flex justify-end gap-2">
                                     <a href="{{ route('clients.edit',$client) }}">

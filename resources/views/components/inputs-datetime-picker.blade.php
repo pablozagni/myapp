@@ -1,14 +1,9 @@
-@props([
-    'label' => '',
-    'name' => '',
-    'value' => ''
-])
-
-<div class="md:grid sm:grid-cols-1 md:grid-cols-3 mb-3">
+<div class="grid grid-cols-3 mb-3">
     <x-inputs-label>{{ $label }}</x-inputs-label>
-    <div class="w-full md:col-span-2">
+    <div class="w-full col-span-2">
+
         <input
-            type="text"
+            type="datetime-local"
             {{ $attributes->merge(['class'=>'w-full form-control'])}} 
             @if (isset($name)) id="{{ $name }}"  @endif
             @if (isset($name)) name="{{ $name }}" @endif

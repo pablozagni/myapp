@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Client;
+use App\Models\Country;
+use App\Models\Status;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -10,29 +13,28 @@ class ClientController extends Controller
 
     protected function rules( Client $client = null)
     {
-        return [ 'name' => 'required|unique:clients,name,'.$client->id ];
+        return [ 
+            'name' => 'required|unique:clients,name,'.$client->id ,
+            'country_id' => 'required|exists:countries,id',
+            'when' => 'date|nullable',
+            'hour' => 'timestamp',
+            'status' => 'numeric|exists:statuses,id',
+        ];
     }
 
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         return view('user.clients.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         $client = New Client() ;
-        return view('user.clients.create',compact('client'));
+        $CountriesSelector = Country::selector();
+        $StatusSelector = Status::selector();
+        return view('user.clients.create',compact('client','CountriesSelector','StatusSelector'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request, Client $client)
     {
         $request->validate( $this->rules($client) );
@@ -40,44 +42,37 @@ class ClientController extends Controller
         $client->name = $request->get('name');
         $client->email = $request->get('email');
         $client->phone = $request->get('phone');
+        $client->country_id = $request->get('country_id');
+        $client->when = $request->get('when');
+        $client->datehour = $request->get('datehour');
+        $client->obs = $request->get('obs');
+        $client->status = $request->get('status');
         $client->save();
+        $client->countries()->sync($request->get('countries'));
         return redirect()->route('clients.index');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(Client $client)
     {
-        return view('user.clients.edit',compact('client'));
+        $CountriesSelector = Country::selector();
+        $StatusSelector = Status::selector();
+        return view('user.clients.edit',compact('client','CountriesSelector','StatusSelector'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, Client $client)
     {
         $request->validate( $this->rules($client) );
         $client->name = $request->get('name');
         $client->email = $request->get('email');
         $client->phone = $request->get('phone');
+        $client->country_id = $request->get('country_id');
+        $client->when = $request->get('when');
+        $client->datehour = $request->get('datehour');
+        $client->obs = $request->get('obs');
+        $client->status = $request->get('status');
         $client->save();
+        $client->countries()->sync($request->get('countries'));
         return redirect()->route('clients.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
 }

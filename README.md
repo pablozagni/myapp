@@ -2,16 +2,24 @@
 This is a basic Laravel App using Laravel 10, Jetstream, Livewire, laravelcollective/html, Bite and Tailwind CSS.
 This APP uses pablozagni/laravel-starter-pack, a package intended to concentrate all blade components and re use them in any new application.
 It has a lot of componets, designed for a rapid development start.
+The idea is to build a complete and usefull suite of components.
+
+With
+![Form code](https://github.com/pablozagni/myapp/blob/master/resources/assets/markdown/img/img8.png?raw=true)
+You get
+![Form](https://github.com/pablozagni/myapp/blob/master/resources/assets/markdown/img/img7.png?raw=true)
+And responsive
+![Form responsive](https://github.com/pablozagni/myapp/blob/master/resources/assets/markdown/img/img9.png?raw=true)
 
 ##  Usage
 ```
  - clone repo
  - create .env file from .env.example
  - php artisan key:generate
- - php artisan migrate:fresh
+ - php artisan migrate:fresh --seed
  - serve and register
 ```
-
+You can login with Seeded user *admin@admin.com* with password *123456789*
 ##  The APP
 
 There are GUESTs views:

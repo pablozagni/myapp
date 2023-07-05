@@ -13,4 +13,12 @@ class Client extends Model
         return "name";
     }
 
+    public function country() {
+        return $this->belongsTo(Country::class);
+    }
+
+    public function countries() {
+        return $this->belongsToMany(Country::class);
+    }
+
 }

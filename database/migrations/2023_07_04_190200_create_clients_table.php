@@ -16,6 +16,11 @@ return new class extends Migration
             $table->string('name', 100)->unique()->index();
             $table->string('email', 100)->unique()->nullable();
             $table->string('phone', 20)->unique()->nullable();
+            $table->foreignId('country_id')->nullable()->constrained('countries');
+            $table->date('when')->nullable();
+            $table->timestamp('datehour')->nullable();
+            $table->binary('obs')->nullable();
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }

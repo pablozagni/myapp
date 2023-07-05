@@ -25,5 +25,5 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])-
     Route::get('/dashboard', [ PagesController::class, 'dashboard'] )->name('dashboard');
     
     // Clients
-    Route::resource('clients', ClientController::class )->names('clients');
+    Route::resource('clients', ClientController::class )->names('clients')->only(['index','create','store','edit','update']);
 });

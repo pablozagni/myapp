@@ -58,4 +58,9 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $appends = [
         'profile_photo_url',
     ];
+
+    static function selector() {
+        return User::orderBy('name')->pluck('name','id');
+    }
+
 }
